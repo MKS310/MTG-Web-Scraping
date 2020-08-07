@@ -1,0 +1,741 @@
+{
+    "0": {
+        "DeckName": "Golos, Tireless Pilgrim",
+        "NumberOfDecks": "48",
+        "PercentOfDecks": "1.73",
+        "PaperPrice": "1,349.48",
+        "OnlinePrice": "322.07",
+        "Cards": {
+            "0": {
+                "name": "Golos, Tireless Pilgrim",
+                "text": "When Golos, Tireless Pilgrim enters the battlefield, you may search your library for a land card, put that card onto the battlefield tapped, then shuffle your library.\n{2}{W}{U}{B}{R}{G}: Exile the top three cards of your library. You may play them this turn without paying their mana costs.",
+                "colors": [],
+                "mana_cost": "{5}"
+            },
+            "1": {
+                "name": "Bloom Tender",
+                "text": "{T}: For each color among permanents you control, add one mana of that color.",
+                "colors": [
+                    "Green"
+                ],
+                "mana_cost": "{1}{G}"
+            },
+            "2": {
+                "name": "Faeburrow Elder",
+                "text": "Vigilance\nFaeburrow Elder gets +1/+1 for each color among permanents you control.\n{T}: For each color among permanents you control, add one mana of that color.",
+                "colors": [
+                    "Green",
+                    "White"
+                ],
+                "mana_cost": "{1}{G}{W}"
+            },
+            "3": {
+                "name": "Arena Rector",
+                "text": "When Arena Rector dies, you may exile it. If you do, search your library for a planeswalker card, put it onto the battlefield, then shuffle your library.",
+                "colors": [
+                    "White"
+                ],
+                "mana_cost": "{3}{W}"
+            },
+            "4": {
+                "name": "Atraxa, Praetors' Voice",
+                "text": "Flying, vigilance, deathtouch, lifelink\nAt the beginning of your end step, proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+                "colors": [
+                    "Black",
+                    "Green",
+                    "Blue",
+                    "White"
+                ],
+                "mana_cost": "{G}{W}{U}{B}"
+            },
+            "5": {
+                "name": "Felidar Guardian",
+                "text": "When Felidar Guardian enters the battlefield, you may exile another target permanent you control, then return that card to the battlefield under its owner's control.",
+                "colors": [
+                    "White"
+                ],
+                "mana_cost": "{3}{W}"
+            },
+            "6": {
+                "name": "Nicol Bolas, the Ravager",
+                "text": "Flying\nWhen Nicol Bolas, the Ravager enters the battlefield, each opponent discards a card.\n{4}{U}{B}{R}: Exile Nicol Bolas, the Ravager, then return him to the battlefield transformed under his owner's control. Activate this ability only any time you could cast a sorcery.",
+                "colors": [
+                    "Black",
+                    "Red",
+                    "Blue"
+                ],
+                "mana_cost": "{1}{U}{B}{R}"
+            },
+            "7": {
+                "name": "Spark Double",
+                "text": "You may have Spark Double enter the battlefield as a copy of a creature or planeswalker you control, except it enters with an additional +1/+1 counter on it if it's a creature, it enters with an additional loyalty counter on it if it's a planeswalker, and it isn't legendary if that permanent is legendary.",
+                "colors": [
+                    "Blue"
+                ],
+                "mana_cost": "{3}{U}"
+            },
+            "8": {
+                "name": "Deepglow Skate",
+                "text": "When Deepglow Skate enters the battlefield, double the number of each kind of counter on any number of target permanents.",
+                "colors": [
+                    "Blue"
+                ],
+                "mana_cost": "{4}{U}"
+            },
+            "9": {
+                "name": "Seedborn Muse",
+                "text": "Untap all permanents you control during each other player's untap step.",
+                "colors": [
+                    "Green"
+                ],
+                "mana_cost": "{3}{G}{G}"
+            },
+            "10": {
+                "name": "Aminatou, the Fateshifter",
+                "text": "[+1]: Draw a card, then put a card from your hand on top of your library.\n[\u22121]: Exile another target permanent you own, then return it to the battlefield under your control.\n[\u22126]: Choose left or right. Each player gains control of all nonland permanents other than Aminatou, the Fateshifter controlled by the next player in the chosen direction.\nAminatou, the Fateshifter can be your commander.",
+                "colors": [
+                    "Black",
+                    "Blue",
+                    "White"
+                ],
+                "mana_cost": "{W}{U}{B}"
+            },
+            "11": {
+                "name": "Narset, Parter of Veils",
+                "text": "Each opponent can't draw more than one card each turn.\n[\u22122]: Look at the top four cards of your library. You may reveal a noncreature, nonland card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.",
+                "colors": [
+                    "Blue"
+                ],
+                "mana_cost": "{1}{U}{U}"
+            },
+            "12": {
+                "name": "Oko, Thief of Crowns",
+                "text": "[+2]: Create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this artifact: You gain 3 life.\")\n[+1]: Target artifact or creature loses all abilities and becomes a green Elk creature with base power and toughness 3/3.\n[\u22125]: Exchange control of target artifact or creature you control and target creature an opponent controls with power 3 or less.",
+                "colors": [
+                    "Green",
+                    "Blue"
+                ],
+                "mana_cost": "{1}{G}{U}"
+            },
+            "13": {
+                "name": "Saheeli Rai",
+                "text": "[+1]: Scry 1. Saheeli Rai deals 1 damage to each opponent.\n[\u22122]: Create a token that's a copy of target artifact or creature you control, except it's an artifact in addition to its other types. That token gains haste. Exile it at the beginning of the next end step.\n[\u22127]: Search your library for up to three artifact cards with different names, put them onto the battlefield, then shuffle your library.",
+                "colors": [
+                    "Red",
+                    "Blue"
+                ],
+                "mana_cost": "{1}{U}{R}"
+            },
+            "14": {
+                "name": "Teferi, Time Raveler",
+                "text": "Each opponent can cast spells only any time they could cast a sorcery.\n[+1]: Until your next turn, you may cast sorcery spells as though they had flash.\n[\u22123]: Return up to one target artifact, creature, or enchantment to its owner's hand. Draw a card.",
+                "colors": [
+                    "Blue",
+                    "White"
+                ],
+                "mana_cost": "{1}{W}{U}"
+            },
+            "15": {
+                "name": "Chandra, Torch of Defiance",
+                "text": "[+1]: Exile the top card of your library. You may cast that card. If you don't, Chandra, Torch of Defiance deals 2 damage to each opponent.\n[+1]: Add {R}{R}.\n[\u22123]: Chandra, Torch of Defiance deals 4 damage to target creature.\n[\u22127]: You get an emblem with \"Whenever you cast a spell, this emblem deals 5 damage to any target.\"",
+                "colors": [
+                    "Red"
+                ],
+                "mana_cost": "{2}{R}{R}"
+            },
+            "16": {
+                "name": "Narset Transcendent",
+                "text": "[+1]: Look at the top card of your library. If it's a noncreature, nonland card, you may reveal it and put it into your hand.\n[\u22122]: When you cast your next instant or sorcery spell from your hand this turn, it gains rebound. (Exile the spell as it resolves. At the beginning of your next upkeep, you may cast that card from exile without paying its mana cost.)\n[\u22129]: You get an emblem with \"Your opponents can't cast noncreature spells.\"",
+                "colors": [
+                    "Blue",
+                    "White"
+                ],
+                "mana_cost": "{2}{W}{U}"
+            },
+            "17": {
+                "name": "Ral Zarek",
+                "text": "[+1]: Tap target permanent, then untap another target permanent.\n[\u22122]: Ral Zarek deals 3 damage to any target.\n[\u22127]: Flip five coins. Take an extra turn after this one for each coin that comes up heads.",
+                "colors": [
+                    "Red",
+                    "Blue"
+                ],
+                "mana_cost": "{2}{U}{R}"
+            },
+            "18": {
+                "name": "Tamiyo, Field Researcher",
+                "text": "[+1]: Choose up to two target creatures. Until your next turn, whenever either of those creatures deals combat damage, you draw a card.\n[\u22122]: Tap up to two target nonland permanents. They don't untap during their controller's next untap step.\n[\u22127]: Draw three cards. You get an emblem with \"You may cast spells from your hand without paying their mana costs.\"",
+                "colors": [
+                    "Green",
+                    "Blue",
+                    "White"
+                ],
+                "mana_cost": "{1}{G}{W}{U}"
+            },
+            "19": {
+                "name": "Teferi, Master of Time",
+                "text": "You may activate loyalty abilities of Teferi, Master of Time on any player's turn any time you could cast an instant.\n[+1]: Draw a card, then discard a card.\n[\u22123]: Target creature you don't control phases out. (Treat it and anything attached to it as though they don't exist until its controller's next turn.)\n[\u221210]: Take two extra turns after this one.",
+                "colors": [
+                    "Blue"
+                ],
+                "mana_cost": "{2}{U}{U}"
+            },
+            "20": {
+                "name": "Nicol Bolas, Dragon-God",
+                "text": "Nicol Bolas, Dragon-God has all loyalty abilities of all other planeswalkers on the battlefield.\n[+1]: You draw a card. Each opponent exiles a card from their hand or a permanent they control.\n[\u22123]: Destroy target creature or planeswalker.\n[\u22128]: Each opponent who doesn't control a legendary creature or planeswalker loses the game.",
+                "colors": [
+                    "Black",
+                    "Red",
+                    "Blue"
+                ],
+                "mana_cost": "{U}{B}{B}{B}{R}"
+            },
+            "21": {
+                "name": "Teferi, Hero of Dominaria",
+                "text": "[+1]: Draw a card. At the beginning of the next end step, untap up to two lands.\n[\u22123]: Put target nonland permanent into its owner's library third from the top.\n[\u22128]: You get an emblem with \"Whenever you draw a card, exile target permanent an opponent controls.\"",
+                "colors": [
+                    "Blue",
+                    "White"
+                ],
+                "mana_cost": "{3}{W}{U}"
+            },
+            "22": {
+                "name": "Tezzeret the Seeker",
+                "text": "[+1]: Untap up to two target artifacts.\n[\u2212X]: Search your library for an artifact card with converted mana cost X or less and put it onto the battlefield. Then shuffle your library.\n[\u22125]: Artifacts you control become artifact creatures with base power and toughness 5/5 until end of turn.",
+                "colors": [
+                    "Blue"
+                ],
+                "mana_cost": "{3}{U}{U}"
+            },
+            "23": {
+                "name": "Tezzeret, Artifice Master",
+                "text": "[+1]: Create a 1/1 colorless Thopter artifact creature token with flying.\n[0]: Draw a card. If you control three or more artifacts, draw two cards instead.\n[\u22129]: You get an emblem with \"At the beginning of your end step, search your library for a permanent card, put it onto the battlefield, then shuffle your library.\"",
+                "colors": [
+                    "Blue"
+                ],
+                "mana_cost": "{3}{U}{U}"
+            },
+            "24": {
+                "name": "Chandra, Awakened Inferno",
+                "text": "This spell can't be countered.\n[+2]: Each opponent gets an emblem with \"At the beginning of your upkeep, this emblem deals 1 damage to you.\"\n[\u22123]: Chandra, Awakened Inferno deals 3 damage to each non-Elemental creature.\n[\u2212X]: Chandra, Awakened Inferno deals X damage to target creature or planeswalker. If a permanent dealt damage this way would die this turn, exile it instead.",
+                "colors": [
+                    "Red"
+                ],
+                "mana_cost": "{4}{R}{R}"
+            },
+            "25": {
+                "name": "Liliana, Dreadhorde General",
+                "text": "Whenever a creature you control dies, draw a card.\n[+1]: Create a 2/2 black Zombie creature token.\n[\u22124]: Each player sacrifices two creatures.\n[\u22129]: Each opponent chooses a permanent they control of each permanent type and sacrifices the rest.",
+                "colors": [
+                    "Black"
+                ],
+                "mana_cost": "{4}{B}{B}"
+            },
+            "26": {
+                "name": "Teferi, Temporal Archmage",
+                "text": "[+1]: Look at the top two cards of your library. Put one of them into your hand and the other on the bottom of your library.\n[\u22121]: Untap up to four target permanents.\n[\u221210]: You get an emblem with \"You may activate loyalty abilities of planeswalkers you control on any player's turn any time you could cast an instant.\"\nTeferi, Temporal Archmage can be your commander.",
+                "colors": [
+                    "Blue"
+                ],
+                "mana_cost": "{4}{U}{U}"
+            },
+            "27": {
+                "name": "Nicol Bolas, God-Pharaoh",
+                "text": "[+2]: Target opponent exiles cards from the top of their library until they exile a nonland card. Until end of turn, you may cast that card without paying its mana cost.\n[+1]: Each opponent exiles two cards from their hand.\n[\u22124]: Nicol Bolas, God-Pharaoh deals 7 damage to target opponent, creature an opponent controls, or planeswalker an opponent controls.\n[\u221212]: Exile each nonland permanent your opponents control.",
+                "colors": [
+                    "Black",
+                    "Red",
+                    "Blue"
+                ],
+                "mana_cost": "{4}{U}{B}{R}"
+            },
+            "28": {
+                "name": "Nicol Bolas, Planeswalker",
+                "text": "[+3]: Destroy target noncreature permanent.\n[\u22122]: Gain control of target creature.\n[\u22129]: Nicol Bolas, Planeswalker deals 7 damage to target player or planeswalker. That player or that planeswalker's controller discards seven cards, then sacrifices seven permanents.",
+                "colors": [
+                    "Black",
+                    "Red",
+                    "Blue"
+                ],
+                "mana_cost": "{4}{U}{B}{B}{R}"
+            },
+            "29": {
+                "name": "Ugin, the Spirit Dragon",
+                "text": "[+2]: Ugin, the Spirit Dragon deals 3 damage to any target.\n[\u2212X]: Exile each permanent with converted mana cost X or less that's one or more colors.\n[\u221210]: You gain 7 life, draw seven cards, then put up to seven permanent cards from your hand onto the battlefield.",
+                "colors": [],
+                "mana_cost": "{8}"
+            },
+            "30": {
+                "name": "Swords to Plowshares",
+                "text": "Exile target creature. Its controller gains life equal to its power.",
+                "colors": [
+                    "White"
+                ],
+                "mana_cost": "{W}"
+            },
+            "31": {
+                "name": "Assassin's Trophy",
+                "text": "Destroy target permanent an opponent controls. Its controller may search their library for a basic land card, put it onto the battlefield, then shuffle their library.",
+                "colors": [
+                    "Black",
+                    "Green"
+                ],
+                "mana_cost": "{B}{G}"
+            },
+            "32": {
+                "name": "Cyclonic Rift",
+                "text": "Return target nonland permanent you don't control to its owner's hand.\nOverload {6}{U} (You may cast this spell for its overload cost. If you do, change its text by replacing all instances of \"target\" with \"each.\")",
+                "colors": [
+                    "Blue"
+                ],
+                "mana_cost": "{1}{U}"
+            },
+            "33": {
+                "name": "Heroic Intervention",
+                "text": "Permanents you control gain hexproof and indestructible until end of turn.",
+                "colors": [
+                    "Green"
+                ],
+                "mana_cost": "{1}{G}"
+            },
+            "34": {
+                "name": "Generous Gift",
+                "text": "Destroy target permanent. Its controller creates a 3/3 green Elephant creature token.",
+                "colors": [
+                    "White"
+                ],
+                "mana_cost": "{2}{W}"
+            },
+            "35": {
+                "name": "Teferi's Protection",
+                "text": "Until your next turn, your life total can't change and you gain protection from everything. All permanents you control phase out. (While they're phased out, they're treated as though they don't exist. They phase in before you untap during your untap step.)\nExile Teferi's Protection.",
+                "colors": [
+                    "White"
+                ],
+                "mana_cost": "{2}{W}"
+            },
+            "36": {
+                "name": "Supreme Verdict",
+                "text": "This spell can't be countered.\nDestroy all creatures.",
+                "colors": [
+                    "Blue",
+                    "White"
+                ],
+                "mana_cost": "{1}{W}{W}{U}"
+            },
+            "37": {
+                "name": "Urza's Ruinous Blast",
+                "text": "(You may cast a legendary sorcery only if you control a legendary creature or planeswalker.)\nExile all nonland permanents that aren't legendary.",
+                "colors": [
+                    "White"
+                ],
+                "mana_cost": "{4}{W}"
+            },
+            "38": {
+                "name": "Merciless Eviction",
+                "text": "Choose one \u2014\n\u2022 Exile all artifacts.\n\u2022 Exile all creatures.\n\u2022 Exile all enchantments.\n\u2022 Exile all planeswalkers.",
+                "colors": [
+                    "Black",
+                    "White"
+                ],
+                "mana_cost": "{4}{W}{B}"
+            },
+            "39": {
+                "name": "Primevals' Glorious Rebirth",
+                "text": "(You may cast a legendary sorcery only if you control a legendary creature or planeswalker.)\nReturn all legendary permanent cards from your graveyard to the battlefield.",
+                "colors": [
+                    "Black",
+                    "White"
+                ],
+                "mana_cost": "{5}{W}{B}"
+            },
+            "40": {
+                "name": "Sol Ring",
+                "text": "{T}: Add {C}{C}.",
+                "colors": [],
+                "mana_cost": "{1}"
+            },
+            "41": {
+                "name": "Arcane Signet",
+                "text": "{T}: Add one mana of any color in your commander's color identity.",
+                "colors": [],
+                "mana_cost": "{2}"
+            },
+            "42": {
+                "name": "Talisman of Creativity",
+                "text": "{T}: Add {C}.\n{T}: Add {U} or {R}. Talisman of Creativity deals 1 damage to you.",
+                "colors": [],
+                "mana_cost": "{2}"
+            },
+            "43": {
+                "name": "Talisman of Curiosity",
+                "text": "{T}: Add {C}.\n{T}: Add {G} or {U}. Talisman of Curiosity deals 1 damage to you.",
+                "colors": [],
+                "mana_cost": "{2}"
+            },
+            "44": {
+                "name": "Talisman of Dominance",
+                "text": "{T}: Add {C}.\n{T}: Add {U} or {B}. Talisman of Dominance deals 1 damage to you.",
+                "colors": [],
+                "mana_cost": "{2}"
+            },
+            "45": {
+                "name": "Talisman of Indulgence",
+                "text": "{T}: Add {C}.\n{T}: Add {B} or {R}. Talisman of Indulgence deals 1 damage to you.",
+                "colors": [],
+                "mana_cost": "{2}"
+            },
+            "46": {
+                "name": "Talisman of Progress",
+                "text": "{T}: Add {C}.\n{T}: Add {W} or {U}. Talisman of Progress deals 1 damage to you.",
+                "colors": [],
+                "mana_cost": "{2}"
+            },
+            "47": {
+                "name": "Chromatic Lantern",
+                "text": "Lands you control have \"{T}: Add one mana of any color.\"\n{T}: Add one mana of any color.",
+                "colors": [],
+                "mana_cost": "{3}"
+            },
+            "48": {
+                "name": "Commander's Sphere",
+                "text": "{T}: Add one mana of any color in your commander's color identity.\nSacrifice Commander's Sphere: Draw a card.",
+                "colors": [],
+                "mana_cost": "{3}"
+            },
+            "49": {
+                "name": "The Chain Veil",
+                "text": "At the beginning of your end step, if you didn't activate a loyalty ability of a planeswalker this turn, you lose 2 life.\n{4}, {T}: For each planeswalker you control, you may activate one of its loyalty abilities once this turn as though none of its loyalty abilities have been activated this turn.",
+                "colors": [],
+                "mana_cost": "{4}"
+            },
+            "50": {
+                "name": "Vedalken Orrery",
+                "text": "You may cast spells as though they had flash.",
+                "colors": [],
+                "mana_cost": "{4}"
+            },
+            "51": {
+                "name": "Norn's Annex",
+                "text": "({W/P} can be paid with either {W} or 2 life.)\nCreatures can't attack you or a planeswalker you control unless their controller pays {W/P} for each of those creatures.",
+                "colors": [
+                    "White"
+                ],
+                "mana_cost": "{3}{W/P}{W/P}"
+            },
+            "52": {
+                "name": "Fires of Invention",
+                "text": "You can cast spells only during your turn and you can cast no more than two spells each turn.\nYou may cast spells with converted mana cost less than or equal to the number of lands you control without paying their mana costs.",
+                "colors": [
+                    "Red"
+                ],
+                "mana_cost": "{3}{R}"
+            },
+            "53": {
+                "name": "Leyline of Anticipation",
+                "text": "If Leyline of Anticipation is in your opening hand, you may begin the game with it on the battlefield.\nYou may cast spells as though they had flash.",
+                "colors": [
+                    "Blue"
+                ],
+                "mana_cost": "{2}{U}{U}"
+            },
+            "54": {
+                "name": "Smothering Tithe",
+                "text": "Whenever an opponent draws a card, that player may pay {2}. If the player doesn't, you create a Treasure token. (It's an artifact with \"{T}, Sacrifice this artifact: Add one mana of any color.\")",
+                "colors": [
+                    "White"
+                ],
+                "mana_cost": "{3}{W}"
+            },
+            "55": {
+                "name": "Wilderness Reclamation",
+                "text": "At the beginning of your end step, untap all lands you control.",
+                "colors": [
+                    "Green"
+                ],
+                "mana_cost": "{3}{G}"
+            },
+            "56": {
+                "name": "Doubling Season",
+                "text": "If an effect would create one or more tokens under your control, it creates twice that many of those tokens instead.\nIf an effect would put one or more counters on a permanent you control, it puts twice that many of those counters on that permanent instead.",
+                "colors": [
+                    "Green"
+                ],
+                "mana_cost": "{4}{G}"
+            },
+            "57": {
+                "name": "Maelstrom Nexus",
+                "text": "The first spell you cast each turn has cascade. (When you cast your first spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)",
+                "colors": [
+                    "Black",
+                    "Green",
+                    "Red",
+                    "Blue",
+                    "White"
+                ],
+                "mana_cost": "{W}{U}{B}{R}{G}"
+            },
+            "58": {
+                "name": "Mirari's Wake",
+                "text": "Creatures you control get +1/+1.\nWhenever you tap a land for mana, add one mana of any type that land produced.",
+                "colors": [
+                    "Green",
+                    "White"
+                ],
+                "mana_cost": "{3}{G}{W}"
+            },
+            "59": {
+                "name": "Oath of Teferi",
+                "text": "When Oath of Teferi enters the battlefield, exile another target permanent you control. Return it to the battlefield under its owner's control at the beginning of the next end step.\nYou may activate the loyalty abilities of planeswalkers you control twice each turn rather than only once.",
+                "colors": [
+                    "Blue",
+                    "White"
+                ],
+                "mana_cost": "{3}{W}{U}"
+            },
+            "60": {
+                "name": "Sphere of Safety",
+                "text": "Creatures can't attack you or a planeswalker you control unless their controller pays {X} for each of those creatures, where X is the number of enchantments you control.",
+                "colors": [
+                    "White"
+                ],
+                "mana_cost": "{4}{W}"
+            },
+            "61": {
+                "name": "Omniscience",
+                "text": "You may cast spells from your hand without paying their mana costs.",
+                "colors": [
+                    "Blue"
+                ],
+                "mana_cost": "{7}{U}{U}{U}"
+            },
+            "62": {
+                "name": "Ancient Tomb",
+                "text": "{T}: Add {C}{C}. Ancient Tomb deals 2 damage to you.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "63": {
+                "name": "Arid Mesa",
+                "text": "{T}, Pay 1 life, Sacrifice Arid Mesa: Search your library for a Mountain or Plains card, put it onto the battlefield, then shuffle your library.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "64": {
+                "name": "Blood Crypt",
+                "text": "({T}: Add {B} or {R}.)\nAs Blood Crypt enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "65": {
+                "name": "Bloodstained Mire",
+                "text": "{T}, Pay 1 life, Sacrifice Bloodstained Mire: Search your library for a Swamp or Mountain card, put it onto the battlefield, then shuffle your library.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "66": {
+                "name": "Breeding Pool",
+                "text": "({T}: Add {G} or {U}.)\nAs Breeding Pool enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "67": {
+                "name": "Cascading Cataracts",
+                "text": "Indestructible\n{T}: Add {C}.\n{5}, {T}: Add five mana in any combination of colors.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "68": {
+                "name": "City of Brass",
+                "text": "Whenever City of Brass becomes tapped, it deals 1 damage to you.\n{T}: Add one mana of any color.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "69": {
+                "name": "Command Tower",
+                "text": "{T}: Add one mana of any color in your commander's color identity.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "70": {
+                "name": "Exotic Orchard",
+                "text": "{T}: Add one mana of any color that a land an opponent controls could produce.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "71": {
+                "name": "Fabled Passage",
+                "text": "{T}, Sacrifice Fabled Passage: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library. Then if you control four or more lands, untap that land.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "72": {
+                "name": "Field of the Dead",
+                "text": "Field of the Dead enters the battlefield tapped.\n{T}: Add {C}.\nWhenever Field of the Dead or another land enters the battlefield under your control, if you control seven or more lands with different names, create a 2/2 black Zombie creature token.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "73": {
+                "name": "Flooded Strand",
+                "text": "{T}, Pay 1 life, Sacrifice Flooded Strand: Search your library for a Plains or Island card, put it onto the battlefield, then shuffle your library.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "74": {
+                "name": "Forbidden Orchard",
+                "text": "{T}: Add one mana of any color.\nWhenever you tap Forbidden Orchard for mana, target opponent creates a 1/1 colorless Spirit creature token.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "75": {
+                "name": "Forest",
+                "text": "({T}: Add {G}.)",
+                "colors": [],
+                "mana_cost": null
+            },
+            "76": {
+                "name": "Godless Shrine",
+                "text": "({T}: Add {W} or {B}.)\nAs Godless Shrine enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "77": {
+                "name": "Hallowed Fountain",
+                "text": "({T}: Add {W} or {U}.)\nAs Hallowed Fountain enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "78": {
+                "name": "Interplanar Beacon",
+                "text": "Whenever you cast a planeswalker spell, you gain 1 life.\n{T}: Add {C}.\n{1}, {T}: Add two mana of different colors. Spend this mana only to cast planeswalker spells.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "79": {
+                "name": "Island",
+                "text": "({T}: Add {U}.)",
+                "colors": [],
+                "mana_cost": null
+            },
+            "80": {
+                "name": "Karn's Bastion",
+                "text": "{T}: Add {C}.\n{4}, {T}: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+                "colors": [],
+                "mana_cost": null
+            },
+            "81": {
+                "name": "Mana Confluence",
+                "text": "{T}, Pay 1 life: Add one mana of any color.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "82": {
+                "name": "Marsh Flats",
+                "text": "{T}, Pay 1 life, Sacrifice Marsh Flats: Search your library for a Plains or Swamp card, put it onto the battlefield, then shuffle your library.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "83": {
+                "name": "Misty Rainforest",
+                "text": "{T}, Pay 1 life, Sacrifice Misty Rainforest: Search your library for a Forest or Island card, put it onto the battlefield, then shuffle your library.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "84": {
+                "name": "Mountain",
+                "text": "({T}: Add {R}.)",
+                "colors": [],
+                "mana_cost": null
+            },
+            "85": {
+                "name": "Overgrown Tomb",
+                "text": "({T}: Add {B} or {G}.)\nAs Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "86": {
+                "name": "Plains",
+                "text": "({T}: Add {W}.)",
+                "colors": [],
+                "mana_cost": null
+            },
+            "87": {
+                "name": "Polluted Delta",
+                "text": "{T}, Pay 1 life, Sacrifice Polluted Delta: Search your library for an Island or Swamp card, put it onto the battlefield, then shuffle your library.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "88": {
+                "name": "Prismatic Vista",
+                "text": "{T}, Pay 1 life, Sacrifice Prismatic Vista: Search your library for a basic land card, put it onto the battlefield, then shuffle your library.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "89": {
+                "name": "Reflecting Pool",
+                "text": "{T}: Add one mana of any type that a land you control could produce.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "90": {
+                "name": "Sacred Foundry",
+                "text": "({T}: Add {R} or {W}.)\nAs Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "91": {
+                "name": "Scalding Tarn",
+                "text": "{T}, Pay 1 life, Sacrifice Scalding Tarn: Search your library for an Island or Mountain card, put it onto the battlefield, then shuffle your library.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "92": {
+                "name": "Steam Vents",
+                "text": "({T}: Add {U} or {R}.)\nAs Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "93": {
+                "name": "Stomping Ground",
+                "text": "({T}: Add {R} or {G}.)\nAs Stomping Ground enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "94": {
+                "name": "Swamp",
+                "text": "({T}: Add {B}.)",
+                "colors": [],
+                "mana_cost": null
+            },
+            "95": {
+                "name": "Temple Garden",
+                "text": "({T}: Add {G} or {W}.)\nAs Temple Garden enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "96": {
+                "name": "Verdant Catacombs",
+                "text": "{T}, Pay 1 life, Sacrifice Verdant Catacombs: Search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle your library.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "97": {
+                "name": "Watery Grave",
+                "text": "({T}: Add {U} or {B}.)\nAs Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "98": {
+                "name": "Windswept Heath",
+                "text": "{T}, Pay 1 life, Sacrifice Windswept Heath: Search your library for a Forest or Plains card, put it onto the battlefield, then shuffle your library.",
+                "colors": [],
+                "mana_cost": null
+            },
+            "99": {
+                "name": "Wooded Foothills",
+                "text": "{T}, Pay 1 life, Sacrifice Wooded Foothills: Search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle your library.",
+                "colors": [],
+                "mana_cost": null
+            }
+        }
+    }
+}
