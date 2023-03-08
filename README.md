@@ -1,4 +1,4 @@
-# MTG-Web-Scraping
+# [MTG-Web-Scraping](https://github.com/MKS310/MTG-Web-Scraping/blob/master/schweihs_text.pdf) 
 
 ## Background
 My family and I love playing Magic the Gathering, so I created this project for a final exam for an Unstructured Data Analysis Class during my Master's degree program. The goal was to analyze the deck structure of the tournament decks in the current "meta" (a term used to describe the current cards in popular use). I also wanted to analyze the text on the cards since MTG card narratives contain a lot of interesting Fantasy-genre descriptions.
@@ -94,19 +94,294 @@ remove(dfl)
 ```
 
 
+Visually determine which are the 5 most popular color combinations. Will the topic model detect these color combinations?
+
++ Black,Red,Blue
++ Red,Blue
++ Black
++ Green,Blue 
++ Red
+
+```{r top five, message=FALSE, warning=FALSE, include=FALSE}
+BRB <- 'Black,Red,Blue'
+RB <- 'Red,Blue'
+B <- 'Black'
+GB <- 'Green,Blue'
+R <- 'Red'
+top5colors = c(BRB,RB,B,GB,R)
+#create deck object with decks of top 5 color combos
+deck.obj <- deck_df[which(deck_df$color %in% top5colors),]
+```
+
+### Prepare Data
+
+Prepare data for topic modeling using the function ```makeFlexTexChunks``` from Chapter 13 of Jockers' text.
+
+```{r Data prep for topic modelling, message=FALSE, warning=FALSE, include=FALSE}
+#Tokenize then chunk the text data and remove special characters 
+chunk.size = 1000
+topic.m <- NULL
+for(i in 1:length(deck.obj$name)) {
+  chunk.m <- makeFlexTextChunks(deck.obj$card_text[i],chunk.size,percentage=FALSE)
+  textname <- deck.obj$name[i]
+  segments.m <- cbind(paste(textname,segment=1:nrow(chunk.m),sep="_"),chunk.m)
+  topic.m <- rbind(topic.m,segments.m)
+}
+documents <- as.data.frame(topic.m,stringsAsFactors=F)
+colnames(documents) <- c("id","text")
+```
+
+### Simple Topic Modeling
+
+Perform initial simple topic modeling with 33 topics using the stoplist2.csv file as the stoplist. Several MTG specific words were added such as cards, creature, creatures, spell, library, battlefield, etc. \footnote{Output from this point forward is copied and pasted from the Virtual Lab R Studio due to problems installing mallet on my Mac. The code is in the RMD file, set to not run.}
+
+```{r Simple Topic Modeling, eval=FALSE, include=FALSE}
+#Stoplist with MTG words added
+stoplist <- paste(tdir,"./scripts/stoplist2.csv",sep="")
+mallet.instances <- mallet.import(documents$id,documents$text,stoplist,FALSE,
+                                  token.regexp="[\\p{L}']+")
+topic.model <- MalletLDA(num.topics=33) #33 topics corresponding to the total number of color combinations represented in the data
+topic.model$loadDocuments(mallet.instances)
+vocabulary <- topic.model$getVocabulary()
+```
+
+```{r vlab4, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+word.freqs <- mallet.word.freqs(topic.model)
+head(word.freqs)
+```
+  
+  |     words| term.freq| doc.freq
+---  |--- | --- | ---
+1 |    flying|       776|      208
+2 | vigilance|      2680|     1091
+3 |deathtouch|      1825|      960
+4 |  lifelink|      2047|     1025
+5 | beginning|     11194|     3158
+6 |      step|      5542|     2491
+
+### Train the Model
+
+Set the parameters and train the model
+
+```{r train model in vlab, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+topic.model$setAlphaOptimization(40,80)
+topic.model$train(400)
+```
+
+```
+topic.model$setAlphaOptimization(40,80)
+topic.model$train(400)
+```
+### Explore the Model
 
 
+```{r explor model in vlab, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+topic.words.m <- mallet.topic.words(topic.model,smoothed=TRUE,normalized=TRUE)
+vocabulary <- topic.model$getVocabulary()
+colnames(topic.words.m) <- vocabulary
+mallet.top.words(topic.model,topic.words.m[1,],10)
+```
+
+**The top ten words in group 1:**
 
 
+ |words |   weights
+--- | --- | ---
+create  |     create |0.13426572
+token   |      token |0.11429650
+green   |      green |0.06896267
+tokens  |     tokens |0.05525709
+control |    control |0.04719498
+sacrifice| sacrifice |0.03634215
+saproling |saproling |0.03113279
+beginning| beginning |0.02375286
+copy    |       copy |0.02300867
+dies     |      dies |0.01879157
+
+**The top ten words in group 2:**
+
+  |words |   weights
+--- | --- | ---
+enchanted |    enchanted |0.08977330
+enchant    |     enchant |0.07081737
+control   |      control |0.05614461
+damage    |       damage |0.02960630
+permanent |    permanent |0.02295001
+aura      |         aura |0.02251591
+enchantment| enchantment |0.02049008
+return    |       return |0.02043220
+owner's   |      owner's |0.01724876
+draw      |         draw |0.01525188
 
 
+## Visualizations and Findings
+
+```{r Visualize the Topics, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+# 13.7 Visualize the Model with Wordcloud
+topic.top.words.1 <- mallet.top.words(topic.model,topic.words.m[1,],300)
+topic.top.words.2 <- mallet.top.words(topic.model,topic.words.m[2,],300)
+topic.top.words.3 <- mallet.top.words(topic.model,topic.words.m[3,],300)
+topic.top.words.4 <- mallet.top.words(topic.model,topic.words.m[4,],300)
+topic.top.words.5 <- mallet.top.words(topic.model,topic.words.m[5,],300)
+wordcloud(topic.top.words.1$words,topic.top.words.1$weights,c(4,.8),rot.per=0,
+          random.order=FALSE)
+wordcloud(topic.top.words.2$words,topic.top.words.2$weights,c(4,.8),rot.per=0,
+          random.order=FALSE)
+wordcloud(topic.top.words.3$words,topic.top.words.3$weights,c(4,.8),rot.per=0,
+          random.order=FALSE)
+wordcloud(topic.top.words.4$words,topic.top.words.4$weights,c(4,.8),rot.per=0,
+          random.order=FALSE)
+wordcloud(topic.top.words.5$words,topic.top.words.5$weights,c(4,.8),rot.per=0,
+          random.order=FALSE)
+```
+
+To determine if the topic models separated the text by color, we will look at the topic probability. The colors of the decks decks with a greater than 50% chance of belonging to each topic are represented in the bar chart followed by the topic cloud corresponding to the topic.
 
 
+```{r Findings, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+# 13.8 Topic Probability
+doc.topics.m <- mallet.doc.topics(topic.model,smoothed=T,normalized=T)
+file.ids.v <- documents[,1]
+head(file.ids.v)
+file.id.1 <- strsplit(file.ids.v,"_")
+file.chunk.id.1 <- lapply(file.id.1,rbind)
+file.chunk.id.m <- do.call(rbind,file.chunk.id.1)
+head(file.chunk.id.m)
+doc.topics.df <- as.data.frame(doc.topics.m)
+doc.topics.df <- cbind(file.chunk.id.m[,1],doc.topics.df)
+doc.topic.means.df <- aggregate(doc.topics.df[,2:ncol(doc.topics.df)],
+                                list(doc.topics.df[,1]),mean)
+```
 
+### Topic 1
 
+```{r load vlab df, message=FALSE, warning=FALSE, include=FALSE}
+doc.topic.means.df <- readRDS("./doc_topic_means_df")
+```
 
+![](cloud1_1.png)
 
-## Web Scraping and Building the Dataset
+```{r Topic1 vlab, echo=FALSE, message=FALSE, warning=FALSE, fig.height = 3, fig.width = 5, fig.align = "center"}
+#TOPIC 1
+group1.l <- which(doc.topic.means.df$V1>.5)
+filenames <- as.character(doc.topic.means.df[group1.l,"Group.1"])
+group_colors <- deck_df$color[which(deck_df$name%in%filenames)]
+group_colors <- data.frame(col = group_colors, num = rep(1, length(group_colors)))
+group_colors <- group_colors %>% group_by(col) %>% summarize(num = sum(num))
+ggplot(group_colors, aes(col, num), y = num)+geom_col()+
+  ggtitle("Decks in Topic 1")+
+    theme_bw() + xlab("") + ylab("")+
+  theme(axis.text.x = element_text(angle = 90,hjust=0.95,vjust=0.2),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line(colour = "black"),
+        legend.position = "none")
+```
+
+This topic consists of mostly mono-colored decks, and predominantly white decks. 
+
+### Topic 2
+
+![](cloud2_1.png)
+
+```{r Topic2 vlab, message=FALSE, warning=FALSE, echo=FALSE, fig.height = 3, fig.width = 5, fig.align = "center"}
+#TOPIC 2
+group2.l <- which(doc.topic.means.df$V2>.5)
+filenames <- as.character(doc.topic.means.df[group2.l,"Group.1"])
+group_colors <- deck_df$color[which(deck_df$name%in%filenames)]
+group_colors <- data.frame(col = group_colors, num = rep(1, length(group_colors)))
+group_colors <- group_colors %>% group_by(col) %>% summarize(num = sum(num))
+ggplot(group_colors, aes(col, num), y = num)+
+  geom_col()+
+  ggtitle("Decks in Topic 2")+
+    theme_bw() +xlab("") + ylab("")+
+  theme(axis.text.x = element_text(angle = 90,hjust=0.95,vjust=0.2),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line(colour = "black"),
+        legend.position = "none")
+```
+
+Topic 2 is composed of a lot of blue, a color associated with 'control', which can be seen in the wordcloud.
+
+### Topic 3
+
+![](cloud3_1.png)
+
+```{r Topic3 vlab, echo=FALSE, message=FALSE, warning=FALSE, fig.height = 3, fig.width = 5, fig.align = "center"}
+#TOPIC 3
+group3.l <- which(doc.topic.means.df$V3>.5)
+filenames <- as.character(doc.topic.means.df[group3.l,"Group.1"])
+group_colors <- deck_df$color[which(deck_df$name%in%filenames)]
+group_colors <- data.frame(col = group_colors, num = rep(1, length(group_colors)))
+group_colors <- group_colors %>% group_by(col) %>% summarize(num = sum(num))
+ggplot(group_colors, aes(col, num), y = num)+
+  geom_col()+
+  ggtitle("Decks in Topic 3")+
+    theme_bw() +xlab("") + ylab("")+
+  theme(axis.text.x = element_text(angle = 90,hjust=0.95,vjust=0.2),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line(colour = "black"),
+        legend.position = "none")
+```
+
+Topic 3 consists of mostly 3-colored decks and colorless decks. Colorless is a special type that is often associated with "Artifact" type cards, so it is no surprise to see this represented in the wordcloud. It could also be true that decks with more than two colors utilize alot of artifacts.
+
+### Topic 4
+
+![](cloud4_1.png)
+
+```{r Topic4 vlab, echo=FALSE, message=FALSE, warning=FALSE, fig.height = 3, fig.width = 5, fig.align = "center"}
+#TOPIC 4
+group4.l <- which(doc.topic.means.df$V4>.5)
+filenames <- as.character(doc.topic.means.df[group4.l,"Group.1"])
+group_colors <- deck_df$color[which(deck_df$name%in%filenames)]
+group_colors <- data.frame(col = group_colors, num = rep(1, length(group_colors)))
+group_colors <- group_colors %>% group_by(col) %>% summarize(num = sum(num))
+ggplot(group_colors, aes(col, num), y = num)+
+  geom_col()+
+  ggtitle("Decks in Topic 4")+
+    theme_bw() +xlab("") + ylab("")+
+  theme(axis.text.x = element_text(angle = 90,hjust=0.95,vjust=0.2),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line(colour = "black"),
+        legend.position = "none")
+```
+
+Suprisingly, in the topic 4 wordcloud, we see the word "graveyard" which is often associated with black. However, one popular game-mechanic is "ressurection" in which things are brought back from the dead (ie., from the graveyard). This may actually be a green, life-giving, mechanic.
+
+### Topic 5
+
+![](cloud5_1.png)
+
+```{r Topic5 vlab, echo=FALSE, message=FALSE, warning=FALSE, fig.height = 3, fig.width = 5, fig.align = "center"}
+#TOPIC 5
+group5.l <- which(doc.topic.means.df$V5>.5)
+filenames <- as.character(doc.topic.means.df[group5.l,"Group.1"])
+group_colors <- deck_df$color[which(deck_df$name%in%filenames)]
+group_colors <- data.frame(col = group_colors, num = rep(1, length(group_colors)))
+group_colors <- group_colors %>% group_by(col) %>% summarize(num = sum(num))
+ggplot(group_colors, aes(col, num), y = num)+
+  geom_col()+
+  ggtitle("Decks in Topic 5")+
+    theme_bw() + xlab("") + ylab("")+
+  theme(axis.text.x = element_text(angle = 90,hjust=0.95,vjust=0.2),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line(colour = "black"),
+        legend.position = "none")
+```
+
+Topic 5's wordcloud tells the story of the aggressive red deck: control, block, callous, attack, power, champion, etc.
+
+## Discussion & Conclusion
 
 The largest part of the project was building the dataset. There are some great sites online that track cards and deck configurations. I wanted to build a dataset that consisted of deck configurations pulled from the latest tournaments and after contact several web admins for API or database access, I resigned to scraping the data myself. Of course, I checked out the sites' robots.txt files first.
 
@@ -115,10 +390,16 @@ After scraping and formatting the data into a JSON format, I enriched the data u
 [The Jupyter Notebook](https://github.com/MKS310/MTG-Web-Scraping/beautiful_soup_demo.ipynb) for this project was created as a demo of the web scraping portion.
 I gave this demo to the Python Users Group at my corporate job to demonstrate some web scraping ideas.
 
-## Analyzing the Data
 
-I used R to do some basic text mining operations to remove stopwords, punctuation, and capitalization, I made word clouds for the text on each group of 
+After modeling deck data for the current Commander-format metagame, patterns and stories emerged and could be seen in the wordclouds. There is room for further exploration into this dataset. The data collected from MTGgoldfish could be used to analyze the network of cards, connected to each other via decks.
 
-![](https://github.com/MKS310/MTG-Web-Scraping/blob/master/cloud1_1.png)
+## [References](https://github.com/MKS310/MTG-Web-Scraping/blob/master/schweihs_text.bib)
 
-[The Report file](https://github.com/MKS310/MTG-Web-Scraping/blob/master/schweihs_text.pdf) demonstrates the NLP side of this analysis. 
+
+
+
+
+
+
+
+
